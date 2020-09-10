@@ -11,7 +11,7 @@
     />
     <link
       rel="stylesheet"
-      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+      href="css/fontawesome.min.css"
     />
     <link rel="stylesheet" href="css/normlaize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -22,8 +22,10 @@
       <div class="container">
         <div class="nav-items">
           <h5 class="timzeone mr-3 fsize-nav-1">Location:</h5>
-          <h5 class="timezone mr-3 fsize-nav-1" id="timezone"></h5>
-          <canvas class="mb-2" id="icon" width="32" height="32"></canvas>
+          <div class="d-flex align-items-center">
+            <h5 class="timezone mr-3 fsize-nav-1" id="timezone"></h5>
+            <canvas class="mb-2" id="icon" width="32" height="32"></canvas>
+          </div>
         </div>
         <div class="nav-btns-center">
           <h5
@@ -46,7 +48,7 @@
         <h3 class="ml-3 pt-4 border-bottom">Current weather</h3>
 
         <div class="d-flex flex-column">
-          <h5 class="pl-3" id="currentTime"></h5>
+          <h5 class="pl-3 current-time-size" id="currentTime"></h5>
           <div class="current-forecast-div">
             <div class="d-flex align-items-center">
               <canvas
@@ -57,10 +59,10 @@
               ></canvas>
               <div>
                 <div class="d-flex btn" id="temp-section">
-                  <h1 class="mr-2" id="degree"></h1>
+                  <h1 class="mr-2 current-degree-size" id="degree"></h1>
                   <h1 id="degreeSpan"><strong></strong></h1>
                 </div>
-                <h5 id="description"></h5>
+                <h5 class="current-desc-size" id="description"></h5>
               </div>
             </div>
             <div class="myTablePrimaryDiv">
@@ -108,7 +110,7 @@
         <h3 class="ml-3 pt-4 border-bottom">Daily forecast</h3>
         <div class="daily-summary-div border-bottom">
           <h4 class="mr-3">Summary:</h4>
-          <h5 id="daily-summary"></h5>
+          <h5 id="daily-summary" class="daily-summary-heading"></h5>
         </div>
         <div id="daily-section"></div>
       </div>
