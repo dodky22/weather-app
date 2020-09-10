@@ -1,0 +1,157 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  background: #ccc;
+}
+
+.animation {
+  transition: ease-in-out 2s;
+  display: flex;
+}
+
+.shadow {
+  background: rgb(233, 233, 233);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+.day-button {
+  cursor: pointer;
+  border-radius: 10px;
+  background: #ffc107;
+  padding: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.day-button:hover {
+  background: rgb(233, 233, 233);
+  color: #ffc107;
+}
+
+.current-transition {
+  transition: all 1s ease;
+}
+
+.current-forecast-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myTable {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.myTableDiv {
+  width: 100%;
+}
+
+.myTablePrimary {
+  width: 400px;
+}
+.hourly-single-item {
+  margin: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.daily-summary-div {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-forecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.day-temp-icon-daily-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .current-forecast-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .myTable {
+    width: 100%;
+  }
+  .myTablePrimary {
+    width: 100%;
+  }
+  .myTablePrimaryDiv {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .fsize-nav {
+    font-size: 0.9rem;
+  }
+  .nav-btns-center {
+    margin: 0 auto;
+  }
+  .nav-items {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 780px) {
+}
+@media screen and (max-width: 770px) {
+  .hourly-description-show {
+    display: none;
+  }
+}
+@media screen and (max-width: 460px) {
+  .hourly-time-show {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .hourly-single-item {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .daily-summary-div {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 995px) {
+  .f-size {
+    font-size: 1rem;
+  }
+  .f-size-2 {
+    font-size: 1.1rem;
+  }
+  .daily-desc-show {
+    display: none;
+  }
+  .day-temp-icon-daily-div {
+    width: 80%;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 547px) {
+  .nav-btns-center {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 440px) {
+  .fsize-nav-1 {
+    font-size: 0.9rem;
+  }
+}
