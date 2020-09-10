@@ -73,11 +73,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 35%;
 }
 
 .nav-items {
   display: flex;
   align-items: center;
+}
+.daily-summary-heading {
+  text-align: center;
+}
+
+.hourly-temp-time-icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.pleft-percip-hourly {
+  padding-left: 0.8rem;
+}
+
+/*
+* MEDIA QUERIES---------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 995px) {
+  .daily-desc-show {
+    display: none;
+  }
+  .day-temp-icon-daily-div {
+    width: 80%;
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -111,10 +140,63 @@ body {
   .hourly-description-show {
     display: none;
   }
+  .hourly-temp-time-icon-div {
+    width: 80%;
+    justify-content: space-around;
+  }
+  .daily-summary-div {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .f-size,
+  .f-size-hourly {
+    font-size: 1rem;
+  }
+
+  .f-size-2,
+  .f-size-hourly-2 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 547px) {
+  .nav-btns-center {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 460px) {
   .hourly-time-show {
     display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .current-time-size {
+    font-size: 1.1rem;
+  }
+  .current-degree-size {
+    font-size: 1.7rem;
+  }
+  .current-desc-size {
+    font-size: 1.2rem;
+  }
+  .myTablePrimary,
+  .myTable {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .fsize-nav-1 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .f-size-2 {
+    font-size: 1rem;
+  }
+  .daily-summary-heading {
+    font-size: 1rem;
   }
 }
 
@@ -124,34 +206,18 @@ body {
   }
 }
 
-@media screen and (max-width: 770px) {
-  .daily-summary-div {
+@media screen and (max-width: 330px) {
+  .nav-items {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 995px) {
-  .f-size {
-    font-size: 1rem;
+
+@media screen and (max-width: 320px) {
+  .f-size-3 {
+    font-size: 0.8rem;
+    align-self: center;
   }
-  .f-size-2 {
-    font-size: 1.1rem;
-  }
-  .daily-desc-show {
-    display: none;
-  }
-  .day-temp-icon-daily-div {
-    width: 80%;
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 547px) {
-  .nav-btns-center {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 440px) {
-  .fsize-nav-1 {
-    font-size: 0.9rem;
+  .pleft-percip-hourly {
+    padding-left: 0.3rem;
   }
 }
