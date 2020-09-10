@@ -29,8 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
-
           const {
             temperature,
             summary,
@@ -101,6 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
           timeCurrent.textContent = unixToTime(time);
 
           setIcons(icon, "icon");
+
           setIcons(icon, "icon1");
 
           changeUnitOnClick(temperature);
@@ -315,10 +314,10 @@ window.addEventListener("DOMContentLoaded", () => {
     
       <div class= "day-forecast">
         <div class="day-temp-icon-daily-div">
-          <h4 class="pl-3 pr-3 f-size">${time} </h4>
-          <h4 class="pr-3 f-size-2"><strong>${high} / ${low}</strong></h4>
+          <h4 class="pr-1 f-size">${time} </h4>
+          <h4 class="pr-1 f-size-2"><strong>${high}|${low}</strong></h4>
           <canvas
-                class="align-self-center f-size"
+                class="align-self-center "
                 id="icons-${id}"
                 width="32"
                 height="32"
@@ -329,7 +328,7 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="d-flex align-items-center justify-content-end">
 
           <div class="d-flex pr-4">
-            <span style="color: rgb(0, 102, 255);"
+            <span class="f-size-3" style="color: rgb(0, 102, 255);"
               ><i class="fas fa-tint"></i
             ></span>
             <h5 class="pl-2 f-size">
@@ -349,9 +348,9 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="hourly-single-item  shadow ">
     
       <div class="d-flex align-items-center justify-content-between hour-forecast">
-        <div class="d-flex align-items-center">
-          <h4 class="pl-4 pr-4">${time}<span class="hourly-time-show">:00</span> </h4>
-          <h4 class="pr-4"><strong>${high}</strong></h4>
+        <div class="hourly-temp-time-icon-div">
+          <h4 class="pl-4 pr-4 f-size-hourly">${time}<span class="hourly-time-show">:00</span> </h4>
+          <h4 class="pr-4 f-size-hourly-2"><strong>${high}</strong></h4>
           <canvas
                 class="align-self-center"
                 id="icon-${id}"
@@ -364,10 +363,10 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="d-flex align-items-center justify-content-end">
 
           <div class="d-flex pr-4">
-            <span style="color: rgb(0, 102, 255);"
+            <span class="f-size-3" style="color: rgb(0, 102, 255);"
               ><i class="fas fa-tint"></i
             ></span>
-            <h5 class="pl-2">
+            <h5 class="pleft-percip-hourly">
             ${perc}
             </h5>
           </div>
@@ -377,39 +376,5 @@ window.addEventListener("DOMContentLoaded", () => {
     hourlySection.appendChild(hour);
   }
 
-  // function showDailyExtended() {
-  //   const dailyExtended = document.getElementById("daily-extended");
-  //   const dailyExtendedChildren = document.getElementById(
-  //     "daily-extended-children"
-  //   );
-
-  //   dailyExtended.addEventListener("click", () => {
-  //     const table = document.getElementById("tbody-daily");
-
-  //     const dailyExtendedForecast = [
-  //       { title: "Cloud cover: " },
-  //       { title: "Dew point" },
-  //       { title: "Humidity: " },
-  //       { title: "Ozone: " },
-  //       { title: "Percip intensity: " },
-  //       { title: "Percip type: " },
-  //       { title: "Pressure: " },
-  //       { title: "visibility: " },
-  //       { title: "Wind bearing: " },
-  //       { title: "Wind gust: " },
-  //     ];
-  //     dailyExtendedChildren.classList.remove("d-none");
-  //     // dailyExtendedChildren.classList.toggle("d-block");
-
-  //     if (table.hasChildNodes()) {
-  //       table.innerHTML = "";
-  //     }
-
-  //     dailyExtendedForecast.forEach((element) => {
-  //       const row = document.createElement("tr");
-  //       row.innerHTML = `<td>${element.title}</td><td></td>`;
-  //       table.appendChild(row);
-  //     });
-  //   });
-  // }
+ 
 });
