@@ -266,7 +266,10 @@ window.addEventListener("DOMContentLoaded", () => {
   function unixToTime(time) {
     const date = new Date(time * 1000);
     const hour = date.getHours();
-    const minutes = date.getMinutes();
+    let minutes = date.getMinutes();
+    if (/^\d$/.test(minutes)) {
+      minutes = `0${minutes}`;
+    }
     let myDate = `${hour}:${minutes}`;
     return myDate;
   }
@@ -328,9 +331,8 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="d-flex align-items-center justify-content-end">
 
           <div class="d-flex pr-4">
-            <span class="f-size-3" style="color: rgb(0, 102, 255);"
-              ><i class="fas fa-tint"></i
-            ></span>
+          <span class="f-size-3"
+          >&#9748</span>
             <h5 class="pl-2 f-size">
             ${perc}
             </h5>
@@ -363,9 +365,8 @@ window.addEventListener("DOMContentLoaded", () => {
         <div class="d-flex align-items-center justify-content-end">
 
           <div class="d-flex pr-4">
-            <span class="f-size-3" style="color: rgb(0, 102, 255);"
-              ><i class="fas fa-tint"></i
-            ></span>
+            <span class="f-size-3"
+              >&#9748</span>
             <h5 class="pleft-percip-hourly">
             ${perc}
             </h5>
